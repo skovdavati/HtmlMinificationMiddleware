@@ -18,8 +18,8 @@ jobs:
     - name: Build NuGet Package
       run: dotnet pack ./src/HtmlMinificationMiddleware/HtmlMinificationMiddleware.csproj --configuration Release -o NuGetPackages
     - name: Analyze with SonarCloud
-        uses: sonarsource/sonarcloud-github-action@master
-        env:
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     #- name: Deploy NuGet Package
